@@ -7,7 +7,7 @@ contract TruckStopToken is ERC20{
 
     address immutable Owner;
     address immutable StrongManPersonalFinance = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; //Need Metamask wallet address
-    address immutable J_Naugy = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; //Need Metamask wallet address
+    address immutable J_Naugy = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; //Need Metamask wallet address from
 
     address public TruckStopTokenAddress = address(this);    
     TruckStopToken tokenObject = TruckStopToken(TruckStopTokenAddress);
@@ -22,7 +22,7 @@ contract TruckStopToken is ERC20{
 
     function swapOneMATICforOneTST() public payable { // 1 TST = 1 MATIC. WARNING: WE ARE NOT ON A DEX [AT LEAST YET]. THIS IS JUST FOR FUN.
         require(tokenObject.balanceOf(address(this)) >= msg.value, "Not enough TST in contract to match ETH in msg.value!");
-        require((msg.value > 2) && (msg.value%3 == 0), "For msg.value must be greater than 2 and divisable by 0!");
+        require((msg.value > 2) && (msg.value%3 == 0), "msg.value must be greater than 2 and divisable by 0!");
         tokenObject.transfer(msg.sender, msg.value); //Reward for sending ETH. MATIC. 1 swap pair between ETH and TST.
         payable(Owner).transfer(address(this).balance/3); //3/3 = 1
         payable(StrongManPersonalFinance).transfer(address(this).balance/2); // (3-1)/2 = 1
