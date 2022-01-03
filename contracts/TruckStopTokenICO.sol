@@ -14,8 +14,8 @@ contract TruckStopToken is ERC20{
 
     constructor() ERC20("TruckStopToken","TST") { //Fair ICOs like ETH have 80% public sale [We have 82%]. 1 million tokens total.
         Owner = msg.sender;
-        _mint(address(this),                (820000)*(10**18) );
-        _mint(Owner,                         (60000)*(10**18) ); //Mint costs less gas than transfer.
+        _mint(address(this),                (819999)*(10**18) ); //PublicAmount%3=0.
+        _mint(Owner,                         (60001)*(10**18) ); //Mint costs less gas than transfer.
         _mint(StrongManPersonalFinance,      (60000)*(10**18) );
         _mint(J_Naugy,                       (60000)*(10**18) );
     }
