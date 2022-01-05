@@ -5,28 +5,18 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract TruckStopToken is ERC20{
 
-    address immutable Owner;
+    address immutable Owner; // Will add TST to Uniswap pool for trading.
     address immutable StrongManPersonalFinance = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; //Need Metamask wallet address
     address immutable J_Naugy = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db; //Need Metamask wallet address from
 
     address public TruckStopTokenAddress = address(this);    
     TruckStopToken tokenObject = TruckStopToken(TruckStopTokenAddress);
 
-    constructor() ERC20("TruckStopToken","TST") { //Fair ICOs like ETH have 80% public sale [We have 82%]. 1 million tokens total.
+    constructor() ERC20("TruckStopToken","TST") { //Fair ICOs like ETH have 80% public sale [We have 82%]. 1 quadrillion (10**15) tokens.
         Owner = msg.sender;
-        _mint(Owner,                        (88)*(10**24) ); //Mint costs less gas than transfer. Owner will keep 6000 but put 82000 on Uniswap
-        _mint(StrongManPersonalFinance,      (6)*(10**24) );
-        _mint(J_Naugy,                       (6)*(10**24) );
+        _mint(Owner,                        (88)*(10**31) ); //Mint costs less gas than transfer. Owner will keep 6 but put 82 on Uniswap
+        _mint(StrongManPersonalFinance,      (6)*(10**31) ); //Mint costs less gas than transfer. 
+        _mint(J_Naugy,                       (6)*(10**31) ); //18 [base] + 13 [10 trillion] = 10**31
     }
-
-    //I am going to just mint and add to Uniswap. 
-    // function swapOneMATICforOneTST() public payable { // 1 TST = 1 MATIC. WARNING: WE ARE NOT ON A DEX [AT LEAST YET]. THIS IS JUST FOR FUN.
-    //     require(tokenObject.balanceOf(address(this)) >= msg.value, "Not enough TST in contract to match MATIC in msg.value!");
-    //     require((msg.value > 2) && (msg.value%3 == 0), "msg.value must be greater than 2 and divisable by 0!");
-    //     tokenObject.transfer(msg.sender, msg.value); //Reward for sending MATIC. 1 swap pair between MATIC and TST.
-    //     payable(Owner).transfer(address(this).balance/3); //3/3 = 1
-    //     payable(StrongManPersonalFinance).transfer(address(this).balance/2); // (3-1)/2 = 1
-    //     payable(J_Naugy).transfer(address(this).balance); // (3-2) = 1
-    // }
     
 }
