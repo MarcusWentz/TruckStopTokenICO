@@ -14,19 +14,19 @@ contract TruckStopToken is ERC20{
 
     constructor() ERC20("TruckStopToken","TST") { //Fair ICOs like ETH have 80% public sale [We have 82%]. 1 million tokens total.
         Owner = msg.sender;
-        _mint(address(this),                (819999)*(10**18) ); //PublicAmount%3=0.
-        _mint(Owner,                         (60001)*(10**18) ); //Mint costs less gas than transfer.
-        _mint(StrongManPersonalFinance,      (60000)*(10**18) );
-        _mint(J_Naugy,                       (60000)*(10**18) );
+        _mint(Owner,                        (88)*(10**24) ); //Mint costs less gas than transfer. Owner will keep 6000 but put 82000 on Uniswap
+        _mint(StrongManPersonalFinance,      (6)*(10**24) );
+        _mint(J_Naugy,                       (6)*(10**24) );
     }
 
-    function swapOneMATICforOneTST() public payable { // 1 TST = 1 MATIC. WARNING: WE ARE NOT ON A DEX [AT LEAST YET]. THIS IS JUST FOR FUN.
-        require(tokenObject.balanceOf(address(this)) >= msg.value, "Not enough TST in contract to match MATIC in msg.value!");
-        require((msg.value > 2) && (msg.value%3 == 0), "msg.value must be greater than 2 and divisable by 0!");
-        tokenObject.transfer(msg.sender, msg.value); //Reward for sending MATIC. 1 swap pair between MATIC and TST.
-        payable(Owner).transfer(address(this).balance/3); //3/3 = 1
-        payable(StrongManPersonalFinance).transfer(address(this).balance/2); // (3-1)/2 = 1
-        payable(J_Naugy).transfer(address(this).balance); // (3-2) = 1
-    }
+    //I am going to just mint and add to Uniswap. 
+    // function swapOneMATICforOneTST() public payable { // 1 TST = 1 MATIC. WARNING: WE ARE NOT ON A DEX [AT LEAST YET]. THIS IS JUST FOR FUN.
+    //     require(tokenObject.balanceOf(address(this)) >= msg.value, "Not enough TST in contract to match MATIC in msg.value!");
+    //     require((msg.value > 2) && (msg.value%3 == 0), "msg.value must be greater than 2 and divisable by 0!");
+    //     tokenObject.transfer(msg.sender, msg.value); //Reward for sending MATIC. 1 swap pair between MATIC and TST.
+    //     payable(Owner).transfer(address(this).balance/3); //3/3 = 1
+    //     payable(StrongManPersonalFinance).transfer(address(this).balance/2); // (3-1)/2 = 1
+    //     payable(J_Naugy).transfer(address(this).balance); // (3-2) = 1
+    // }
     
 }
