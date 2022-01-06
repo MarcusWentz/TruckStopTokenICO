@@ -1,9 +1,13 @@
 # TruckStopToken (TST) ICO
 
-A joke token made for Strong Man Personal Finance and J Naugy.\
-Token logo 32x32 IPFS+Filecoin https://storageapi.fleek.co/marcuswentz-team-bucket/TRUCK_LOGO_32_32.png
+A joke token made for Strong Man Personal Finance and J Naugy.
 
-<img src="https://github.com/MarcusWentz/TruckStopTokenICO/blob/main/images/HIGH_RES.png" alt="ICO"/>
+Website: https://marcuswentz.github.io/TruckStopTokenICO/ \
+Deployed Contract: ! STRONG MAN PERSONAL FINANCE AND J NAUGY NEED TO SEND METAMASK PUBLIC ADDRESS FIRST !\
+Uniswap Trading: ! WAITING TO DELPLOY CONTRACT FIRST ! 
+Token logo 32x32 IPFS+Filecoin https://storageapi.fleek.co/marcuswentz-team-bucket/TRUCK_LOGO_32_32.png \
+
+<img src="https://github.com/MarcusWentz/TruckStopTokenICO/blob/main/images/TRUCK.png" alt="ICO"/>
 
 Fair ICO token smart contract without time limit. 82% public sale. 
 
