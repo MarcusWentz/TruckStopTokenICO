@@ -6,7 +6,7 @@ Whitepaper: https://github.com/MarcusWentz/TruckStopTokenICO/blob/main/whitepape
 
 Website: https://marcuswentz.github.io/TruckStopTokenICO/ 
 
-Deployed Contract: ! STRONG MAN PERSONAL FINANCE AND J NAUGY NEED TO SEND METAMASK PUBLIC ADDRESS FIRST !
+Deployed Contract: ! STRONG MAN PERSONAL FINANCE AND J NAUGY NEED TO SEND METAMASK PUBLIC ADDRESSES FIRST TO GET THEIR TST !
 
 Uniswap Trading: ! WAITING TO DELPLOY CONTRACT FIRST !
 
